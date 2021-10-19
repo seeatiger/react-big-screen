@@ -1,12 +1,10 @@
 import React, { PureComponent } from 'react';
-import { LeftPage, LeftTopBox, RightCenterBox,LeftBottomBox } from './style';
+import { LeftPage, LeftTopBox, LeftBottomBox } from './style';
 import { ModuleTitle } from '../../style/globalStyledSet';
 import { BorderBox12, BorderBox13 } from '@jiaminghi/data-view-react';
 import TrafficSituation from './charts/TrafficSituation';
 import UserSituation from './charts/UserSituation';
 import { connect } from 'dva';
-
-import UserIdentityCategory from './charts/UserIdentityCategory';
 
 class index extends PureComponent {
   constructor(props) {
@@ -14,19 +12,9 @@ class index extends PureComponent {
     this.state = {};
   }
   render() {
-    const { userSitua, userSitua1, trafficSitua, accessFrequency, peakFlow,userIdentityCategory } = this.props;
+    const { userSitua, userSitua1, trafficSitua, accessFrequency, peakFlow } = this.props;
     return (
       <LeftPage>
-        <RightCenterBox>
-          <BorderBox12 className="right-center-borderBox12">
-            <ModuleTitle>
-              <i className='iconfont'>&#xe7fd;</i>
-              <span>企业排名</span>
-            </ModuleTitle>
-            <UserIdentityCategory
-              userIdentityCategory={userIdentityCategory}></UserIdentityCategory>
-          </BorderBox12>
-        </RightCenterBox>
         {/* 顶部图表 */}
         <LeftTopBox>
           <BorderBox12 className='left-top-borderBox12'>
@@ -52,8 +40,7 @@ class index extends PureComponent {
                 <span>源异常事件</span>
               </ModuleTitle>
               {/* 图表 */}
-              {/* <UserSituation userSitua={userSitua1}></UserSituation> */}
-              <UserSituation userSitua={userSitua}></UserSituation>
+              <UserSituation userSitua={userSitua} userSitua1={userSitua1}></UserSituation>
             </div>
           </BorderBox13>
         </LeftBottomBox>
@@ -69,7 +56,6 @@ const mapStateToProps = state => {
     userSitua: state.leftPage.userSitua,
     userSitua1: state.leftPage.userSitua1,
     trafficSitua: state.leftPage.trafficSitua,
-    userIdentityCategory :state.leftPage.userIdentityCategory,
   };
 };
 

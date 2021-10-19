@@ -1,10 +1,9 @@
 import React, { PureComponent, Fragment } from 'react';
 import { formatTime } from '../../utils';
-import {BorderBox8,
+import {
   Decoration10,
   Decoration8,
   Decoration6,
-  BorderBox13,
 } from '@jiaminghi/data-view-react';
 
 import { TopBox, TimeBox } from './style';
@@ -13,7 +12,7 @@ class index extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      title: '南 京 放 射 源 在 线 监 视',
+      title: '南京放射源在线监视',
       timeStr: '',
       weekday: [
         '星期天',
@@ -49,11 +48,19 @@ class index extends PureComponent {
       <Fragment>
         <TopBox>
           <div className='top_box'>
+            <Decoration10 className='top_decoration10' />
             <div className='title-box'>
+              <Decoration8
+                className='top_decoration8'
+                color={['#568aea', '#000000']}
+              />
               <div className='title'>
-                <BorderBox8 reverse="true" className="border1">
-                  <span className='title-text'>{title}</span>
-                </BorderBox8>
+                <span className='title-text'>{title}</span>
+                <Decoration6
+                  className='title-bototm top_decoration6'
+                  reverse={true}
+                  color={['#50e3c2', '#67a1e5']}
+                />
               </div>
 
               <Decoration8

@@ -6,22 +6,7 @@ export const LeftPage = styled.div`
   padding: 0.2rem;
   padding-bottom: 0px;
 `;
-export const RightCenterBox = styled.div`
-  position: relative;
-  height: 3.125rem;
-  width: 100%;
-  margin-bottom: 0.25rem;
-  .right-center-borderBox12 {
-        width: inherit;
-        height: inherit;
-        padding: 0.1875rem;
-      .right-center {
-          width: 100%;
-          height: 100%;
-          border-radius: 10px;
-    }
-  }
-`;
+
 export const LeftTopBox = styled.div`
   position: relative;
   height: 4.375rem;
@@ -53,7 +38,7 @@ export const LeftTopBox = styled.div`
 export const LeftBottomBox = styled.div`
   position: relative;
   margin-top: 0.25rem;
-  height: 4.25rem;
+  height: 7.75rem;
   width: 100%;
   .left-bottom-borderBox13 {
     width: inherit;

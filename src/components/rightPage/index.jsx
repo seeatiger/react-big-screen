@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { BorderBox12,BorderBox13 } from '@jiaminghi/data-view-react';
 import BrowseCategories from './charts/BrowseCategories';
+import UserIdentityCategory from './charts/UserIdentityCategory';
 import OfflinePortal from './charts/OfflinePortal';
 import Feedback from './charts/Feedback';
 import { ModuleTitle } from '../../style/globalStyledSet';
@@ -8,7 +9,7 @@ import { connect } from 'dva';
 import {
   RightPage,
   RightTopBox,
-  
+  RightCenterBox,
   RightBottomBox,
 } from './style';
 import {  Right11 } from './style';
@@ -51,7 +52,6 @@ class index extends PureComponent {
                           );
                         })
                       : ''}
-                      
                   </div>
               </Right11>
             </div>
@@ -59,7 +59,16 @@ class index extends PureComponent {
           </BorderBox12>
         </RightTopBox>
 
-
+        <RightCenterBox>
+          <BorderBox12 className="right-center-borderBox12">
+            <ModuleTitle>
+              <i className='iconfont'>&#xe7fd;</i>
+              <span>企业排名</span>
+            </ModuleTitle>
+            <UserIdentityCategory
+              userIdentityCategory={userIdentityCategory}></UserIdentityCategory>
+          </BorderBox12>
+        </RightCenterBox>
 
         <RightBottomBox>
           <BorderBox13 className='right-bottom-borderBox13'>
@@ -70,7 +79,6 @@ class index extends PureComponent {
               </ModuleTitle>
               {/* 反馈 */}
               <div className='feedback-box'>
-                <div style={{position: 'relative'}}>
                 {offline
                   ? offline.feedback.map((item, index) => {
                       return (
@@ -81,39 +89,6 @@ class index extends PureComponent {
                       );
                     })
                   : ''}
-                  </div><div style={{position: 'relative'}}>
-                  {offline
-                  ? offline.feedback.map((item, index) => {
-                      return (
-                        <div className='feedback-box-item' key={index}>
-                          <Feedback FeedbackData={item}></Feedback>
-                          <span className='dis-text'>{item.title}</span>
-                        </div>
-                      );
-                    })
-                  : ''}</div>
-                  <div style={{position: 'relative'}}>
-                  {offline
-                  ? offline.feedback.map((item, index) => {
-                      return (
-                        <div className='feedback-box-item' key={index}>
-                          <Feedback FeedbackData={item}></Feedback>
-                          <span className='dis-text'>{item.title}</span>
-                        </div>
-                      );
-                    })
-                  : ''}</div>
-                  <div style={{position: 'relative'}}>
-                  {offline
-                  ? offline.feedback.map((item, index) => {
-                      return (
-                        <div className='feedback-box-item' key={index}>
-                          <Feedback FeedbackData={item}></Feedback>
-                          <span className='dis-text'>{item.title}</span>
-                        </div>
-                      );
-                    })
-                  : ''}</div>
               </div>
               {/* 门店 */}
               <div className='offline-portal-box'>

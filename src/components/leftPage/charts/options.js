@@ -201,5 +201,4 @@ export const trafficOptions = (params) => ({
 export const userOptions = (params = {}) => ({
   header: params.header,
   data: params.data,
-  data2: params.data2,
 });

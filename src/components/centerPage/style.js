@@ -1,15 +1,10 @@
 import styled from 'styled-components';
 
 export const CenterPage = styled.div`
-  // margin-top: 0.25rem;
-   width: 6.425rem;
-
-  // display: flex;
-  // flex-direction: column;
+  margin-top: 0.25rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  height: auto;
-  padding: 0.2rem;
-  padding-bottom: 0px;
 `;
 
 export const CenterBottom = styled.div`
@@ -17,8 +12,7 @@ export const CenterBottom = styled.div`
   margin-bottom: 0.25rem;
   margin-top: 0.875rem;
   width: 100%;
-  // height: 3.25rem;
-  height: auto;
+  height: 3.25rem;
   .detail-list {
     display: flex;
     flex-wrap: wrap;

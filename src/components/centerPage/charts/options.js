@@ -132,12 +132,17 @@ export const mapOptions = (params) => ({
     },
     map: '南京',
     label: {
+      normal:{
+        show: true,
+        color:"#FFFFFF",
+      },
       emphasis: {
-        show: false,
+        show: true,
+        color:"#FFFFFF",
       },
     },
 
-    zoom: 1.2,
+    zoom: 1.3,
     itemStyle: {
       normal: {
         // borderColor: 'rgba(255,209,163, .5)', //区域边框颜色
@@ -150,7 +155,8 @@ export const mapOptions = (params) => ({
         // areaColor: "#013C62",
         // shadowColor:"#01273F",
         shadowOffsetX:1,
-        shadowOffsetY:2
+        shadowOffsetY:2,
+        labelColor:"#013C62",
       },
       emphasis: {
         borderColor: '#FFD1A3',
@@ -189,64 +195,48 @@ export const mapOptions = (params) => ({
 
       data: mapData.citys,
     },
-    {
-      name: '地点',
-      type: 'custom',
-      coordinateSystem: 'geo',
-      zlevel: 2,
-      // rippleEffect: {
-      //   brushType: 'stroke',
-      // },
-      label: {
-        emphasis: {
-          show: true,
-          position: 'right',
-          formatter: '{b}',
-        },
-      },
-      symbolSize: 10,
-      showEffectOn: 'render',
-      itemStyle: {
-        normal: {
-          // image: '../../assets/images/fs.png',
-          color: '#46bee9',
-        },
-      },
-      renderItem: function(params,api) {
-        console.error("params")
-        return  {
-          type: 'image',
-          // coordinateSystem: "geo",
-          style: {
-            image: dianxinImage,
-            x: api.coord([
-                mapData.citys1[params.dataIndex].value[0], mapData.citys1[params.dataIndex].value[1]
-            ])[0],
-            y: api.coord([
-                mapData.citys1[params.dataIndex].value[0], mapData.citys1[params.dataIndex].value[1]
-            ])[1],
-            width: 20,
-            height: 19,
-          }
-        }
-      },
-      
-      // markPoint: { //图表标注。
-      //               label: {
-      //                   normal: {
-      //                       show: true,
-      //                   },
-      //                   emphasis: {
-      //                       show: true,
-      //                   }
-      //               },
-      //               itemStyle: {
-      //                   normal: {
-      //                       color: 'rgba(72,150,128,1)'
-      //                   }
-      //               },
-      //             },
-      data: mapData.citys1,
-    },
+    // {
+    //   name: '地点',
+    //   type: 'custom',
+    //   coordinateSystem: 'geo',
+    //   zlevel: 2,
+    //   // rippleEffect: {
+    //   //   brushType: 'stroke',
+    //   // },
+    //   label: {
+    //     emphasis: {
+    //       show: true,
+    //       position: 'right',
+    //       formatter: '{b}',
+    //     },
+    //   },
+    //   symbolSize: 10,
+    //   showEffectOn: 'render',
+    //   itemStyle: {
+    //     normal: {
+    //       // image: '../../assets/images/fs.png',
+    //       color: '#46bee9',
+    //     },
+    //   },
+    //   renderItem: function(params,api) {
+    //     console.error("params")
+    //     return  {
+    //       type: 'image',
+    //       // coordinateSystem: "geo",
+    //       style: {
+    //         image: dianxinImage,
+    //         x: api.coord([
+    //             mapData.citys1[params.dataIndex].value[0], mapData.citys1[params.dataIndex].value[1]
+    //         ])[0],
+    //         y: api.coord([
+    //             mapData.citys1[params.dataIndex].value[0], mapData.citys1[params.dataIndex].value[1]
+    //         ])[1],
+    //         width: 20,
+    //         height: 19,
+    //       }
+    //     }
+    //   },
+    //   data: mapData.citys1,
+    // },
   ],
 });

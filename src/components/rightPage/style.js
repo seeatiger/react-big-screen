@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 export const RightPage = styled.div`
-  width: 9.25rem;
+  width: 6.25rem;
   height: auto;
-  padding: 0.2rem;
-  padding-bottom: 0px;
+  padding: 0px 0.2rem;
 `;
 
 export const RightTopBox = styled.div`
@@ -55,7 +54,7 @@ export const RightCenterBox = styled.div`
 
 export const RightBottomBox = styled.div`
   position: relative;
-  height: 9rem;
+  height: 6rem;
   width: 100%;
   .right-bottom-borderBox13 {
     padding: 0.25rem 0.1875rem 0.1875rem;
@@ -113,7 +112,7 @@ export const Right11 = styled.div`
       position: relative;
       height: 1.5625rem;
       padding: 0 0;
-      width: 30%;
+      width: 45%;
       border-radius: 5px;
       border: 1px solid #343f4b;
       background-color: rgba(19, 25, 47, 0.8);
