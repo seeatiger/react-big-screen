@@ -8,7 +8,8 @@ import * as echarts from 'echarts';
 import 'zrender/lib/svg/svg';
 import { debounce } from './index'; // 一个节流函数
 const mapData = require('./../assets/320100_full.json')
-                
+var index = 0;     
+let myChart = {};
 export default class Chart extends PureComponent {
   constructor(props) {
     super(props);
@@ -25,8 +26,27 @@ export default class Chart extends PureComponent {
     this.setOption(this.props.option);
     // 监听屏幕缩放，重新绘制 echart 图表
     window.addEventListener('resize', debounce(this.resize, 100));
+    this.autoTooltip()
   }
-
+  autoTooltip = () => {
+      if(this.props.option.mapData){
+          const dataLength = this.props.option.mapData.length;
+          const _this = this;
+          setTimeout(function() {
+              myChart.dispatchAction({
+                  type: 'showTip',
+                  seriesIndex: 0,
+                  dataIndex: index
+              });
+              
+              index++;
+              if(index >= dataLength) {
+                  index = 0;
+              }
+              _this.autoTooltip();
+          }, 2000);
+          }
+      }
   componentDidUpdate() {
     // 每次更新组件都重置
     this.setOption(this.props.option);
@@ -58,6 +78,9 @@ export default class Chart extends PureComponent {
           width: 'auto',
           height: 'auto',
         });
+        if(this.props.option.mapData){
+          myChart = this.chart;
+          }
         echarts.registerMap('南京', mapData)
         resolve();
       }, 0);

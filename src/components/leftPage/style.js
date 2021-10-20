@@ -6,22 +6,37 @@ export const LeftPage = styled.div`
   padding: 0.2rem;
   padding-bottom: 0px;
 `;
-
+export const RightCenterBox = styled.div`
+  position: relative;
+  height: 3.125rem;
+  width: 100%;
+  margin-bottom: 0.25rem;
+  .right-center-borderBox12 {
+        width: inherit;
+        height: inherit;
+        padding: 0.1875rem;
+      .right-center {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+    }
+  }
+`;
 export const LeftTopBox = styled.div`
   position: relative;
-  height: 4.375rem;
+  height: 3.075rem;
   width: 100%;
   .left-top-borderBox12 {
     width: inherit;
     height: inherit;
-    padding: 0.1875rem;
+    padding: 0rem;
     .left-top {
       width: 100%;
       height: 100%;
       border-radius: 10px;
       background-color: rgba(19, 25, 47, 0.6);
       .title-dis {
-        margin-top: 0.1875rem;
+        margin-top: 0rem;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -37,8 +52,8 @@ export const LeftTopBox = styled.div`
 `;
 export const LeftBottomBox = styled.div`
   position: relative;
-  margin-top: 0.25rem;
-  height: 7.75rem;
+  margin-top: 0.75rem;
+  height: 4rem;
   width: 100%;
   .left-bottom-borderBox13 {
     width: inherit;

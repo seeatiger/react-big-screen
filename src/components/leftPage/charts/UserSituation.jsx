@@ -23,7 +23,7 @@ class UserSituation extends PureComponent {
         // 对其方式
         align: ['center'],
         // 表行数
-        rowNum: 10,
+        rowNum: 5,
         // 轮播方式
         carousel:'page'
       },
@@ -45,7 +45,7 @@ class UserSituation extends PureComponent {
             config={config}
             style={{
               width: '5.475rem',
-              height: '6.8rem',
+              height: '3rem',
             }}></ScrollBoard>
         ) : (
           ''

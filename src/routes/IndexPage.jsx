@@ -16,10 +16,11 @@ class IndexPage extends Component {
       <IndexPageStyle>
         <TopPage />
         <IndexPageContent>
-         {/* 右侧内容 */}
-          <RightPage />
+          
           {/* 中间内容 */}
           <CenterPage className='center-page' />
+          {/* 右侧内容 */}
+          <RightPage />
            {/* 左侧内容 */}
           <LeftPage />
         </IndexPageContent>

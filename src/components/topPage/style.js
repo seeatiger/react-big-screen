@@ -8,7 +8,7 @@ export const TopBox = styled.div`
 
     .top_decoration10 {
       position: relative;
-      width: 33.3%;
+      width: 70%;
       height: 0.0625rem;
     }
 
@@ -24,7 +24,9 @@ export const TopBox = styled.div`
         width: 2.5rem;
         height: 0.625rem;
       }
-
+      .border1{
+        height: 0.625rem;
+      }
       .title {
         position: relative;
         width: 6.25rem;
@@ -33,14 +35,14 @@ export const TopBox = styled.div`
         background-repeat: no-repeat;
 
         .title-text {
-          font-size: 0.5rem;
-          // position: absolute;
-          bottom: 0;
-          left: 50%;
+          font-size: 0.3rem;
+          position: absolute;
+          bottom: 0.15rem;
+          left: 40%;
           color: #fff;
           transform: translate(-50%);
         }
-
+        
         .top_decoration6 {
           width: 3.125rem;
           height: 0.1rem;

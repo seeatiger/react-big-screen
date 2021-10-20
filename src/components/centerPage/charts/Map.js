@@ -16,11 +16,14 @@ class Map extends PureComponent {
     return (
       <div
         style={{
-          width: '10.625rem',
-          height: '12.025rem',
+          width: '6.425rem',
+          height: '11.825rem',
+          position:'absolute',
+          left:'1px',
+          top:'30px'
         }}>
           {
-            mapData?<Chart renderer={renderer} option={mapOptions(mapData)} />:''
+            mapData?<Chart renderer={renderer}  option={mapOptions(mapData)} />:''
           }
       </div>
     );

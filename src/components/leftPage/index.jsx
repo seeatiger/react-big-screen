@@ -1,10 +1,12 @@
 import React, { PureComponent } from 'react';
-import { LeftPage, LeftTopBox, LeftBottomBox } from './style';
+import { LeftPage, LeftTopBox, RightCenterBox,LeftBottomBox } from './style';
 import { ModuleTitle } from '../../style/globalStyledSet';
-import { BorderBox12, BorderBox13 } from '@jiaminghi/data-view-react';
+import {  BorderBox8,BorderBox12, BorderBox13 } from '@jiaminghi/data-view-react';
 import TrafficSituation from './charts/TrafficSituation';
 import UserSituation from './charts/UserSituation';
 import { connect } from 'dva';
+
+import UserIdentityCategory from './charts/UserIdentityCategory';
 
 class index extends PureComponent {
   constructor(props) {
@@ -12,12 +14,22 @@ class index extends PureComponent {
     this.state = {};
   }
   render() {
-    const { userSitua, userSitua1, trafficSitua, accessFrequency, peakFlow } = this.props;
+    const { userSitua, userSitua1, trafficSitua, accessFrequency, peakFlow,userIdentityCategory } = this.props;
     return (
       <LeftPage>
+        <RightCenterBox>
+          <BorderBox8 className="right-center-borderBox12">
+            <ModuleTitle>
+              <i className='iconfont'>&#xe7fd;</i>
+              <span>企业排名</span>
+            </ModuleTitle>
+            <UserIdentityCategory
+              userIdentityCategory={userIdentityCategory}></UserIdentityCategory>
+          </BorderBox8>
+        </RightCenterBox>
         {/* 顶部图表 */}
         <LeftTopBox>
-          <BorderBox12 className='left-top-borderBox12'>
+          <BorderBox8 className='left-top-borderBox12'>
             <div className='left-top'>
               <ModuleTitle>
                 <i className='iconfont'>&#xe78f;</i>
@@ -28,7 +40,7 @@ class index extends PureComponent {
               {/* 图表 */}
               <TrafficSituation trafficSitua={trafficSitua}></TrafficSituation>
             </div>
-          </BorderBox12>
+          </BorderBox8>
         </LeftTopBox>
 
         {/* 底部图表 */}
@@ -56,6 +68,7 @@ const mapStateToProps = state => {
     userSitua: state.leftPage.userSitua,
     userSitua1: state.leftPage.userSitua1,
     trafficSitua: state.leftPage.trafficSitua,
+    userIdentityCategory :state.leftPage.userIdentityCategory,
   };
 };
 
