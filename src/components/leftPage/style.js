@@ -52,7 +52,7 @@ export const LeftTopBox = styled.div`
 `;
 export const LeftBottomBox = styled.div`
   position: relative;
-  margin-top: 0.25rem;
+  margin-top: 0.55rem;
   height: 4.25rem;
   width: 100%;
   .left-bottom-borderBox13 {
