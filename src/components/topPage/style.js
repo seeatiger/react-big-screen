@@ -35,12 +35,13 @@ export const TopBox = styled.div`
         background-repeat: no-repeat;
 
         .title-text {
-          font-size: 0.3rem;
+          font-size: 0.34rem;
           position: absolute;
           bottom: 0.15rem;
-          left: 40%;
+          left: 50%;
           color: #fff;
           transform: translate(-50%);
+          
         }
         
         .top_decoration6 {

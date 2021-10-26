@@ -8,6 +8,7 @@ export const IndexPageStyle = styled.div`
   padding: 10px 0 0 0;
   background: url(${pageBg}) center center no-repeat;
   background-size: cover;
+  
 `;
 export const IndexPageContent = styled.div`
   display: flex;

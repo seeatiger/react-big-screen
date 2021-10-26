@@ -10,7 +10,7 @@ export const CenterPage = styled.div`
   // display: flex;
   // flex-direction: column;
   align-items: center;
-  height: auto;
+  height: 15 rem;
   padding: 0.2rem;
   padding-bottom: 0px;
 
